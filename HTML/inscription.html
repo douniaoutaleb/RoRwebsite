@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>xCoders</title>
+      <!-- Bootstrap core CSS -->
+      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/bootstrap/css/style.css" rel="stylesheet">
+      <!-- Just for debugging purposes. Don't actually copy this line! -->
+      <!--[if lt IE 9]><script src="themes/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- CSS Implementing Plugins -->
+      <link rel="stylesheet" href="assets/custom/css/flexslider.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="assets/custom/css/login.css" type="text/css" >
+      <link rel="stylesheet" href="assets/custom/css/parallax-slider.css" type="text/css">
+      <link rel="stylesheet" href="assets/custom/css/style.css" type="text/css">
+      <link rel="stylesheet" href="assets/font-awesome-4.0.3/css/font-awesome.min.css" type="text/css">
+      <!-- Custom styles for this template -->
+      <link href="assets/custom/css/business-plate.css" rel="stylesheet">
+      <link rel="shortcut icon" href="assets/image/favico.png">
+   </head>
+   <!-- =============================NAVBAR================================================== -->
+   <body>
+      <div class="top">
+         <div class="container">
+            <div class="row-fluid">
+               <ul class="phone-mail">
+                  <li><i class="fa fa-phone"></i><span> +212 6 27 03 19 95</span></li>
+                  <li><i class="fa fa-envelope"></i><span> ensak_biblio@gmail.com</span></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- topHeaderSection --> 
+      <div class="topHeaderSection">
+         <div class="header">
+            <div class="container">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html"><img src="assets/image/x.jpg" alt="ICRACE 2017" height="80px" width="100px"  /></a>
+               </div>
+               <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thèmes<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="intel.html">Intelligence artificielle</a></li>
+                           <li><a href="securite.html">Sécurité des systèmes d'informations</a></li>
+                           <li><a href="crypto.html">Cryptographie quantique</a></li>
+                           <li><a href="analyse.html">Analyse et statistique des données</a></li>
+                        </ul>
+                     </li>
+
+                     <li><a href="partenaire.html">Nos partenaires</a></li>
+
+                     <li><a href="about.html">A propos</a></li>
+                   
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connexion <b class="caret"></b></a>
+                           <ul id="login-dp" class="dropdown-menu">
+                              <li>
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       Connexion
+                                       <form class="form" role="form" method="POST" action="login" accept-charset="UTF-8" id="login-nav">
+
+                                          <div class="form-group">
+                                             <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                             <label class="sr-only" for="exampleInputPassword2">Mot de passe</label>
+                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                             <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+                                          </div>
+                                       </form>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                       Nouvel utilisateur ? <a href="inscription.html"><b>S'inscrire ici!</b></a>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul> 
+                     </li>
+                  </ul>
+                </div>
+               <!--/.nav-collapse -->
+            </div>
+         </div>
+      </div>
+      <!-- bodySection -->
+      <div class="services" style="padding:0px!important;">
+         <div class="container text-center">
+            <div class="row">
+               <h3 class="col-sm-offset-3 col-sm-6">Création d'un compte utilisateur:</h3>
+            </div>
+            <div class="row">
+               <div class="col-sm-offset-1 col-sm-2">
+            
+               </div>
+
+               <div class="col-sm-6">
+                  <form action="r" method="post" accept-charset="utf-8" class="form" role="form">
+                     <div class ="row">
+                        <label>Statut : </label>
+                        <label class="radio-inline">
+                           <input type="radio" name="statut" value="P" id=professeur />Professeur
+                        </label>
+                        <label class="radio-inline">
+                           <input type="radio" name="statut" value="E" id=etudiant />Etudiant
+                        </label>
+                     </div><br/>
+                     <div class="row">
+                        <div class="col-xs-6 col-md-6">
+                           <input type="text" name="firstname" value="" class="form-control input-lg" placeholder="Nom"  />                        </div>
+                        <div class="col-xs-6 col-md-6">
+                           <input type="text" name="lastname" value="" class="form-control input-lg" placeholder="Prénom"  />                        </div>
+                     </div><br/>
+
+                     <input type="text" name="etablissement" value="" class="form-control input-lg" placeholder="Etablissement"  /><br/>
+
+                     <input type="text" name="identifiant" value="" class="form-control input-lg" placeholder="Identifiant"  /><br/><input type="text" name="email" value="" class="form-control input-lg" placeholder="Email"  /><br/><input type="password" name="password" value="" class="form-control input-lg" placeholder="Mot de passe"  /><br/><input type="password" name="confirm_password" value="" class="form-control input-lg" placeholder="Confirmer le mot de passe "  />
+                     <br/><div align="left">Date de naissance : </div><br/>
+                     <div class="row">
+                        <div class="col-xs-4 col-md-4">
+                            <select name="month" class = "form-control input-lg">
+                                <option value="01">Janvier</option><option value="02">Fevrier</option><option value="03">Mars</option>
+                                <option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option>
+                                <option value="07">Juillet</option><option value="08">Aout</option><option value="09">Septembre</option>
+                                <option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Decembre</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <select name="day" class = "form-control input-lg">
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+                                <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+                                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
+                                <option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option>
+                                <option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="21">21</option>
+                                <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+                                <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>
+                                <option value="30">30</option><option value="31">31</option>
+                            </select>                        
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <select name="year" class = "form-control input-lg">
+                                <option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option>
+                                <option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option>
+                                <option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                            </select>
+                        </div>
+                     </div>
+                     
+                     <br />
+                  <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
+                  <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">Créer le compte </button>
+               </form>          
+            </div>
+         </div>
+         </div>
+         </div>
+      </div>
+      </hr class="ligne">
+      
+
+      
+   
+   <!-- footerBottomSection -->	
+   <div class="footerBottomSection">
+      <div class="container">
+         <div class="pull-right" "> <a href="index.html"><img src="assets/image/icrace.png" height="80px" width="110px" alt="ICRACE2017" /></a></div>
+          <div class="align-middle" style="margin-top:3%;">&copy; 2016, Allright reserved. <a href="#">University of Ibn Tofail</a> | <a href="#">ENSA Kenitra</a> </div>
+      </div>
+   </div>
+   <!-- JS Global Compulsory -->			
+   <script type="text/javascript" src="assets/custom/js/jquery-1.8.2.min.js"></script>
+   <script type="text/javascript" src="assets/custom/js/modernizr.custom.js"></script>		
+   <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>	
+   <!-- JS Implementing Plugins -->           
+   <script type="text/javascript" src="assets/custom/js/jquery.flexslider-min.js"></script>
+   <script type="text/javascript" src="assets/custom/js/modernizr.js"></script>
+   <script type="text/javascript" src="assets/custom/js/jquery.cslider.js"></script> 
+   <script type="text/javascript" src="assets/custom/js/back-to-top.js"></script>
+   <script type="text/javascript" src="assets/custom/js/jquery.sticky.js"></script>
+   <!-- JS Page Level -->           
+   <script type="text/javascript" src="assets/custom/js/app.js"></script>
+   <script type="text/javascript" src="assets/custom/js/index.js"></script>
+   <script type="text/javascript">
+      jQuery(document).ready(function() {
+        	App.init();
+          App.initSliders();
+          Index.initParallaxSlider();
+      });
+   </script>
+
+   <script>
+      $(document).ready(function() {
+         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+         var page = $(this).attr('href'); // Page cible
+         var speed = 750; // Durée de l'animation (en ms)
+         $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+         return false;
+         });
+      });
+   </script>
+   </body>
+</html>

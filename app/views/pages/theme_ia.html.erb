@@ -1,0 +1,30 @@
+
+<p id="notice"><%= notice %></p>
+<div id="legend">
+  <legend class=""><h1 style="color: #8b8b8b;">Intelligence artificielle</h1></legend>
+</div>
+
+    
+      <div class="services" style="padding:0px!important;">
+        <div class="container text-center">
+          <div class="row">
+          <% @cours.each do |cour| %>
+            <div class="col-xs-4" >
+               <%= image_tag "computer_science.jpg" %>
+              <h3><%= cour.nom %></h3>
+              <p> 
+                  <%= cour.theme %>
+              </p>
+              <div class="row">
+                <%= link_to 'En savoir plus', cour, :class => " btn btn-warning btn-md pull-right bttn" %>
+                 
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    
+
+<br><br><br>

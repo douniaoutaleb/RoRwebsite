@@ -1,0 +1,45 @@
+ <!-- footerBottomSection -->	
+   <div class="footerBottomSection">
+      <div class="container">
+         <div class="pull-right" > <a href="<% root_url %>"><%= image_tag("x.png", alt: "xCoders", height: 110, width: 120)%> </a></div>
+          <div class="align-middle" style="margin-top:3%;">&copy; 2016, Allright reserved. <a href="#">University of Ibn Tofail</a> | <a href="#">ENSA Kenitra</a> </div>
+      </div>
+   </div>
+   <!-- JS Global Compulsory -->
+
+   <%= javascript_include_tag "jquery-1.8.2.min" %>		
+   <%= javascript_include_tag "modernizr.custom" %>	
+   <%= javascript_include_tag "bootstrap.min" %>	
+   <!-- JS Implementing Plugins -->        
+
+   <%= javascript_include_tag "jquery.flexslider-min" %>	   
+   <%= javascript_include_tag "modernizr" %>	
+   <%= javascript_include_tag "jquery.cslider" %>	
+   <%= javascript_include_tag "back-to-top" %>	
+   <%= javascript_include_tag "jquery.sticky" %>	
+
+
+   <!-- JS Page Level -->      
+
+   <%= javascript_include_tag "app" %>	
+   <%= javascript_include_tag "index" %>
+   <script type="text/javascript">
+      jQuery(document).ready(function() {
+        	App.init();
+          App.initSliders();
+          Index.initParallaxSlider();
+      });
+   </script>
+
+   <script>
+      $(document).ready(function() {
+         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+         var page = $(this).attr('href'); // Page cible
+         var speed = 750; // Durée de l'animation (en ms)
+         $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+         return false;
+         });
+      });
+   </script>
+   </body>
+</html>

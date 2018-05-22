@@ -1,0 +1,16 @@
+
+      
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id user:</strong>
+  <%= @abonnement.id_user %>
+</p>
+
+<p>
+  <strong>Id cours:</strong>
+  <%= @abonnement.id_cours  %>
+</p>
+
+<%= link_to 'Edit', edit_abonnement_path(@abonnement) %> |
+<%= link_to 'Back', abonnements_path %>

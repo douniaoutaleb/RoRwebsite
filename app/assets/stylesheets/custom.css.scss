@@ -1,0 +1,62 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo
+{
+	font-size : 2em;
+	color: black;
+	text-transform : uppsercase;
+	font-weight : bold;
+}
+
+#logo:hover {
+	color : grey;
+	opacity : 0.1;
+	text-decoration : none;
+}
+
+#demo 
+{
+	color : red ;
+}
+footer 
+{
+	margin-top : 50px;
+	border-top : 1px solid #eaeaea;
+	padding-top : 5px;
+	color : #777;
+}
+
+footer a:hover
+{
+	color : #222;
+}
+
+footer small
+{
+	float : left;
+}
+
+footer ul{
+	float :  right;
+	list-style : none;
+}
+
+footer ul li
+{
+	float : left;
+	margin-left : 15px;
+}
+
+.jumbotron
+{
+
+	background-image : asset-url('Paris.jpg');
+	background-size : cover;
+	heght : 350px;
+	margin-left : 40px;
+	margin-right : 40px;
+	border-radius : 5px;
+	
+	color : white;
+}

@@ -1,0 +1,21 @@
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> <!-- JS -->
+ <%= csrf_meta_tags %> <!-- Générer un code unique pour chaque page pour des raisons de sécurité -->
+ 
+	<%= render 'layouts/navigation' %>
+
+	<% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+
+
+<%= yield %>
+<%= render 'layouts/footer' %>
+
+<script>
+
+$(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});
+
+</script>
+

@@ -1,0 +1,38 @@
+
+
+<div class="services" style="padding:0px!important;">
+         <div class="jumbotron">
+            <h1>Cours N°<%= @cour.id %></h1>
+            <p><%= @cour.nom %></p>
+             <% if logged_in? && !current_user.admin && current_user.user_type != "P" %>
+            <p> <%= link_to "S'inscrire",{controller: "cours", action: "register_fail",id_cour: @cour.id}, :class => "btn btn-primary btn-lg" %></p>
+            <%end%>
+         </div>
+         <div style="float: left; margin-left: 5%; margin-right: 5%;" >
+            
+            <div class="well well-lg">
+            institution: <%= @cour.institution %>
+            <br/></hr class="line">
+            thème : <%= @cour.theme %>
+            <br/></hr class="line">
+            langue : <%= @cour.langue %>
+            <br/></hr class="line">
+            Professeur :<%= @cour.professeur %>
+            <br/></hr class="line">
+            </div>
+         </div>
+         <div class="container" >
+         <div >
+            <h2>Description du cours : </h2>
+               <p>
+                  <%= @cour.description %>
+               </p>
+            </div>
+
+      </div>
+      
+     
+
+<div style="margin-left: 40%;margin-bottom: 5%;">
+<%= link_to 'Back', cours_path , :class => "btn btn-default btn-outline "%>
+</div>

@@ -1,0 +1,46 @@
+
+<p id="notice"><%= notice %></p>
+<div id="legend">
+  <legend class=""><h1 style="margin-left:4%;color: #8b8b8b;">Liste des utilisateurs</h1></legend>
+</div>
+
+<div class="services" style="padding:0px!important;">
+    <div class="container text-center">
+      	<div class="row" >
+        	<% @user.each do |user| %>
+				<div class="col-xs-3">
+            		<div class="card hovercard">
+                		<div class="cardheader">
+
+                		</div>
+
+                		<div class="avatar">
+                    		<%= gravatar_for user %>
+                		</div>
+
+                		<div class="info">
+                    		<div class="title">
+                        	 	<%= user.nom %> <%= user.prenom %>
+                    		</div>
+                    		
+                    		<% if user.user_type == "E"%>
+                        		<div class="desc">Etudiant</div>
+                    		<% else %>
+                        		<div class="desc">Professeur</div>
+                    		<% end %>
+                    		<div class="desc"><%= user.etablissement %></div>
+                    		<div class="desc"><%= user.email %></div>
+                    		<div class="desc"><%= user.date %></div>
+                		</div>
+
+                		<div class="bottom" style="color: white;">
+                    		<%= link_to "Supprimer", user, method: :delete, data: { confirm: "confirmer"}, :class => "btn btn-primary btn-lg"%>
+                		</div>
+            		</div>
+           		</div>
+         	<% end %>
+    	</div>
+	</div>
+</div>
+
+<%= will_paginate @user%>

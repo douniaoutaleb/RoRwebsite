@@ -1,0 +1,103 @@
+
+
+      <!-- bannerSection -->
+      <div class="bannerSection">
+         <div class="slider-inner">
+            <div id="da-slider" class="da-slider">
+             
+             <!-- 
+
+             L'excellence de l'enseignement supérieur pour des cours en ligne, gratuits et ouverts à tous
+
+             -->
+               <div class="da-slide">
+                  <h2><i>Une formation en ligne <br/> ouverte à tous</i> <br> </h2>
+                  <div class="da-img" > <%= image_tag "mooc2.png" %> </div>
+               </div>
+               <div class="da-slide">
+                  <h2><i>Développé par :  </i> <br> <i> OMARI Abdellah </i> <br>  <i> OUTALEB Dounia </i> <br> <br> </h2>
+                  <div class="da-img" > <%= image_tag "mooc.PNG" %></div>
+               </div>
+
+              
+               <nav class="da-arrows">
+                  <span class="da-arrows-prev"></span>
+                  <span class="da-arrows-next"></span>		
+               </nav>
+            </div>
+            <!--/da-slider-->
+         </div>
+         <!--/slider-->
+         <!--=== End Slider ===-->
+      </div>
+      <!-- highlightSection -->
+      <div class="highlightSection">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10">
+                  <h1 style="text-align: center;">
+                  
+                  L'excellence de l'enseignement supérieur pour des cours en ligne, <span style="color:#25AAE1;font-weight:bold;"> gratuits et ouverts à tous  </span>
+
+                  </h1>
+                  <p> Ce site a pour <b>missions</b> : </p>
+                  
+                  <ul>
+                     <li> Accompagner le développement des formations tirant pleinement profit du levier numérique et accessibles au plus grand nombre).</li>
+                     <li> Inciter à placer le numérique au cœur du parcours étudiant et des métiers de l'enseignement supérieur et de la recherche.  </li>
+                     <li>Offrir des moyens et services mutualisés en soutien aux initiatives numériques des établissements.</li>
+                  </ul>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- bodySection -->
+      <div class="services">
+         <div class="container" id="track">
+            <h2 class="title"><%= link_to 'Cours actuels', cours_path%></h2>
+            <div class="services" style="padding:0px!important;">
+              <div class="container text-center">
+                <div class="row">
+                <% @cours.each do |cour| %>
+                  <div class="col-md-3" >
+                     <%= image_tag "computer_science.jpg" %>
+                    <h3><%= cour.nom %></h3>
+                    <p> 
+                        <%= cour.theme %>
+                    </p>
+                    <div class="row">
+                      <%= link_to 'En savoir plus', cour, :class => " btn btn-warning btn-md pull-right bttn" %>
+                       
+                    </div>
+                  </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <div style="margin-left: 35%;"><%= will_paginate @cours %></div>
+         </div>
+      </div>
+
+
+
+   <!-- clientSection -->
+   <div class="container">
+      <h2 class="title"><%= link_to 'Our Partners', '/partenaire'%></h2>
+      <div class="clientSection">
+         <div class="row text-center" >
+            <div class="col-md-4">
+               <a href="http://www.ensa.uit.ac.ma/"> <%= image_tag "logo.png" %> </a>
+            </div>
+            <div class="col-md-4">
+               <a href="http://www.insa-centrevaldeloire.fr/fr/"><%= image_tag "2.jpg" %> </a>
+            </div>
+            <div class="col-md-4">
+               <a href="http://www.eilco-ulco.fr/"><%= image_tag "3.jpg" %> </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <br/> <br/>
+  

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>xCoders</title>
+      <!-- Bootstrap core CSS -->
+
+      <%= stylesheet_link_tag "bootstrap.min" %>
+      <%= stylesheet_link_tag "style" %>
+      
+     
+
+           
+      <!-- Just for debugging purposes. Don't actually copy this line! -->
+      <!--[if lt IE 9]><script src="themes/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- CSS Implementing Plugins -->
+      	<%= stylesheet_link_tag "flexslider" %>
+        <%= stylesheet_link_tag "login" %>
+        <%= stylesheet_link_tag "parallax-slider" %>
+        <%= stylesheet_link_tag "styles" %>
+        <%= stylesheet_link_tag "font-awesome.min" %>
+
+      <!-- Custom styles for this template -->
+
+       	<%= stylesheet_link_tag "business-plate" %>
+            <!-- <%= image_tag "favico.png" %>  -->
+      
+     
+   </head>
+   <!-- =============================NAVBAR================================================== -->
+   <body>
+      <div class="top">
+         <div class="container">
+            <div class="row-fluid">
+               <ul class="phone-mail">
+                  <li><i class="fa fa-phone"></i><span> +212 6 27 03 19 95</span></li>
+                  <li><i class="fa fa-envelope"></i><span> ensak_biblio@gmail.com</span></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- topHeaderSection -->	
+      <div class="topHeaderSection">
+         <div class="header">
+            <div class="container">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand">
+
+                  	<%= link_to image_tag("x.png", alt: "xCoders", height: 120, width: 120), root_url, method: :get %> 
+                  	
+                  </a>
+               </div>
+               <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thèmes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                           <li><%= link_to "Intelligence artificielle", '/theme_ia'%></li>
+                            <li><%= link_to "Sécurité des systèmes d'informations", '/theme_securite'%></li>
+                            <li><%= link_to "Analyse et statistique des données", '/theme_analyse'%></li>
+                            <li><%= link_to "Cryptographie", '/theme_crypto'%></li>
+                        </ul>
+                     </li>
+
+                      <li><%= link_to "Nos partenaires",'/partenaire'%></li>
+                      <li><%= link_to "A propos",'/about'%></li>
+                     
+                     <% if !logged_in? %>
+
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connexion <b class="caret"></b></a>
+                           <ul id="login-dp" class="dropdown-menu">
+                              <li>
+                                 <div class="row">
+                                    <div class="col-md-12">
+
+                                       Connexion
+
+                                       <%= form_for(:session, url: login_path, :html => {class: "form", role: "form", id: "login-nav"}) do |f| %>
+
+                                           <div class="form-group">
+                                             <%= f.label :email, class: "sr-only", for: "exampleInputEmail2" %>
+                                              <%= f.email_field :email, class: 'form-control', id: "exampleInputEmail2", placeholder: "Email adresse", required: "required" %>
+
+                                           </div>
+
+                                          
+                                          <div class="form-group">
+                                             <%= f.label :password , class: "sr-only",  for: "exampleInputPassword2" %>
+                                             <%= f.password_field :password, class: 'form-control', id:"exampleInputPassword2",placeholder: "Email adresse", required: "required" %> 
+                                          </div>
+
+                                          <div class="form-group">
+
+                                          <%= f.submit "Se connecter", class: "btn btn-primary btn-block" %>
+
+                                          </div>
+
+
+                                        <% end %>
+
+                                        <p>Nouvel utilisateur? <%= link_to "S'inscrire ici!", inscription_path %></p>
+
+                                    </div>
+                                    
+
+                                    
+                                 </div>
+                              </li>
+                           </ul> 
+                     </li>
+
+                    <% else %>
+
+                      <% if !current_user.admin  && current_user.user_type == "E" %>
+                        <li><%= link_to "Cours Suivis",'/abonnements'%></li>
+                      <% end %>
+
+                      <% if current_user.user_type == "P" %>
+                        <li><%= link_to "Mes Cours", '/prof'%></li>
+                      <% end %>
+                    
+                      <% if current_user.admin %>
+                        <li><%= link_to "Liste des cours", cours_url %></li>
+                        <li><%= link_to "Liste des utilisateurs", users_url %></li>
+                      <% end %>
+
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.nom %> <%= current_user.prenom %> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                            <li> <%= link_to "Profil", user_path(current_user) %> </li>
+                            <li> <%= link_to "Paramètre", edit_user_path(current_user) %> </li>
+                            <li> <%= link_to "Se déconnecter", logout_path, method: "delete" %> </li>  
+
+                        </ul>
+                      </li>
+
+                    <% end %>
+
+                  </ul>
+                </div>
+               <!--/.nav-collapse -->
+            </div>
+         </div>
+      </div>

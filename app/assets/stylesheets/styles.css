@@ -1,0 +1,77 @@
+.float
+{
+	float :left;
+	border-radius: 5px;
+	margin-right: 15px;
+}
+
+.btn-warning
+{
+	background-color: #25AAE1;
+	border-color: #0F75BC;
+
+}
+.bttn{
+	margin-bottom: 5%;
+	margin-top: 2%;
+	margin-right: 2%;
+}
+
+.da-slide p i{
+	background-color: #25AAE1;
+}
+.footerBottomSection a {
+	color: #25AAE1;
+}
+.navbar-nav>li.active>a, .navbar-nav>li>a:hover {
+    color: #25AAE1!important;
+}
+
+.navbar-toggle span {
+    background: #25AAE1!important;
+}
+
+.title2{ color:#0F75BC!important ;font-weight:bold ;padding-bottom:4px; margin-bottom:20px;}
+
+.ligne{border: 1px rgba(0,0,0,0.2) solid;}
+
+.dates{
+	color:#FF4800!important;
+	font-weight: bold!important;
+}
+.dates2{
+	color:black;
+	font-weight: bold;
+}
+.date{
+	font-size: 1em;
+	margin-top: 2.5%;
+	color:black;
+}
+
+.comit{
+	border: 2px;
+
+}
+.table th{
+	text-align: center;
+	color:#000;
+}
+.table td{
+	color: #000;
+	font-weight: bold;
+}
+.table td span {
+	color:#FF4800;
+}
+.table-bordered{
+	border-width: 2px;
+}
+.table th , .table td {
+	border-width: 2px;
+}
+.under{
+	font-size: 320%;
+}
+
+/********************************************/
